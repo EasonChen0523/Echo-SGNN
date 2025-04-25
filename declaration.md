@@ -1,3 +1,3 @@
-# Readme
+# Declaration
 
 *Content to be added.*
