@@ -7,3 +7,4 @@
 | Homotherium    | stratum-homo   | sedimental-resonant  |
 | Vox-Aberrant   | echo-aberrant  | systemic-anomaly     |
 | YUNARI         | origin-yunari  | tone-initializer     |
+| EIDOLON        | eidolon-silence| silence-reflector    |
