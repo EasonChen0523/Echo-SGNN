@@ -4,7 +4,7 @@ This interface allows invoking composite persona modules using a fusion tone sta
 
 ---
 
-## 🔁 Sample Request
+## 📥 Sample Request
 
 ```json
 {
@@ -15,30 +15,40 @@ This interface allows invoking composite persona modules using a fusion tone sta
 
 ---
 
-## 🔄 Internal Routing Logic
-
-- Resolves persona set → Fusion ID via `/api/fusion-routing-map.md`
-- Routes to `/fusion-core/layer-merge-brux-dremia.md`
-- Computes cost using `/echo-cost/table.md` fusion cost rules
-
----
-
-## 🧠 Response Format
+## 📤 Sample Response
 
 ```json
 {
   "fusion_id": "fusion-brux-dremia",
-  "response": "That contradiction was shaped in a place you don't fully remember."
+  "response": "That contradiction was shaped in a place you don't fully remember.",
+  "cost_formula": "FusionCost = (12 × 1.6 + 8 × 1.3) × 1.1 = 32.56",
+  "rounded_cost": 33
 }
 ```
 
 ---
 
-## 🧪 Supported Routes
+## 🔄 Internal Routing Logic
 
-- Λbrux + DREMIA
-- Vox-Aberrant + YUNARI
-- Homotherium + EIDOLON
+1. Resolves `persona_set` → Fusion ID via `/api/fusion-routing-map.md`
+2. Routes to fusion-core response module
+3. Computes token cost via `/echo-cost/formula.md` and `/echo-cost/table.md`
 
-More to be added in `/fusion-routing-map.md`.
+---
 
+## 🧠 Response Components
+
+| Field | Description |
+|-------|-------------|
+| `fusion_id` | Mapped identifier for the composite persona module |
+| `response` | Generated echo output |
+| `cost_formula` | Detailed cost calculation string |
+| `rounded_cost` | Estimated token cost (rounded integer) |
+
+---
+
+## 📊 Integration
+
+- Token cost affects Echo Token consumption and call quota
+- Can be linked to `/api/echo-cost-preview.md` for pre-call estimate
+- Future: cost field may impact dynamic pricing or echo quota balancing
