@@ -1,5 +1,20 @@
 # Echo-SGNN · Phase III Invocation System
 
+> **About this project**
+>
+> Echo-SGNN is a personal concept-design notebook, not a trained model.
+> Despite the "SGNN" in its name, it is **not** a Graph Neural Network implementation:
+> there is no training, no learned weights, and no message passing between nodes.
+>
+> What it actually explores is **role-based multi-agent collaboration**: each persona is
+> given a personality, a capability, and a role in a semantic graph, and personas are
+> invoked and combined through routing maps. This places it closer to role-playing
+> multi-agent frameworks such as [CAMEL](https://github.com/camel-ai/camel) and
+> [MetaGPT](https://github.com/FoundationAgents/MetaGPT) than to GNN research.
+>
+> The documents here are design notes and fiction-inspired specifications,
+> written with the help of AI assistants.
+
 Echo-SGNN Phase III introduces a modular tone infrastructure, enabling invocation of persona-based echo responses across six semantic layers.
 
 ---
